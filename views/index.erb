@@ -9,3 +9,10 @@
   My name is <%= @name %>
   </h1>
 <% end %>
+
+<% unless @name %>
+<form action="/named-cat" >
+<input type="text" name="name">
+<input type="submit" value="Confirm">
+</form> 
+<% end %>
