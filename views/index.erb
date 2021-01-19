@@ -1,18 +1,18 @@
 
 <div style='border: 10px solid green'>
-<img src='https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'>
+  <img src='https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'>
 </div>
 
 
 <% if @name %>
   <h1>
-  My name is <%= @name %>
+    My name is <%= @name %>
   </h1>
 <% end %>
 
 <% unless @name %>
-<form action="/named-cat" >
-<input type="text" name="name">
-<input type="submit" value="Confirm">
-</form> 
+  <form action="/named-cat" >
+    <input type="text" name="name">
+    <input type="submit" value="Confirm">
+  </form>
 <% end %>
