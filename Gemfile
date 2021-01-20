@@ -1,10 +1,15 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-ruby '2.6.5'
+source 'https://rubygems.org'
+
+ruby '3.0.0'
 
 gem 'capybara'
-gem 'rspec', '~> 3.6'
+gem 'rspec'
+gem 'rubocop'
+gem 'rubocop-rspec'
 gem 'selenium-webdriver'
 gem 'shotgun'
 gem 'sinatra'
+gem 'sinatra-contrib'
 gem 'webrick'
