@@ -8,7 +8,7 @@ require 'shotgun'
 
 class Battle < Sinatra::Base
   get '/' do 
-    'Start battle?'
+    'Testing infrastructure working!'
   end
 
   # start the server if ruby file executed directly
