@@ -1,37 +1,18 @@
 # frozen_string_literal: true
 
 require 'sinatra'
+require 'sinatra/base'
 require 'shotgun'
 
-set :session_secret, 'super secret'
+#set :session_secret, 'super secret'
 
-get '/' do
-  'Hello you foolish duck'
-end
+class Battle < Sinatra::Base
+  get '/' do 
+    'Start battle?'
+  end
 
-get '/secret' do
-  'You know all my inner thoughts'
-end
+  # start the server if ruby file executed directly
+  run! if app_file == $0
+end 
 
-get '/HollySecret' do
-  'I am a magician'
-end
 
-get '/random-cat' do
-  @border_width = rand(40)
-  @border_colour = [rand(256), rand(256), rand(256)].join(',')
-  @name = %w[Amigo Oscar Viking].sample
-  erb :index
-end
-
-post '/named-cat' do
-  p params
-  @border_width = rand(40)
-  @border_colour = [rand(256), rand(256), rand(256)].join(',')
-  @name = params[:name]
-  erb :index
-end
-
-get '/cat-form' do
-  erb :cat_form
-end

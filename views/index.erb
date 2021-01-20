@@ -1,18 +1,1 @@
 
-<div style='border: <%= @border_width %>px solid rgb(<%= @border_colour %>)'>
-  <img src='https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png'>
-</div>
-
-
-<% if @name %>
-  <h1>
-    My name is <%= @name %>
-  </h1>
-<% end %>
-
-<% unless @name %>
-  <form action="/named-cat" >
-    <input type="text" name="name">
-    <input type="submit" value="Confirm">
-  </form>
-<% end %>
