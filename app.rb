@@ -16,12 +16,16 @@ get '/HollySecret' do
 end
 
 get '/random-cat' do
+  @border_width = rand(40)
+  @border_colour = [rand(256),rand(256),rand(256)].join(',')
   @name = ["Amigo", "Oscar", "Viking"].sample
   erb :index
 end
 
 post '/named-cat' do
   p params
+  @border_width = rand(40)
+  @border_colour = [rand(256),rand(256),rand(256)].join(',')
   @name = params[:name]
   erb :index
 end
