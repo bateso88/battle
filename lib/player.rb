@@ -1,10 +1,12 @@
-class Player
+# frozen_string_literal: true
 
+# Player class
+class Player
   attr_reader :name, :hp
 
   DEFAULT_HP = 60
 
-  def initialize(name: )
+  def initialize(name:)
     @name = name
     @hp = DEFAULT_HP
   end
@@ -12,5 +14,4 @@ class Player
   def take_damage
     @hp -= 10
   end
-
 end

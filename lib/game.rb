@@ -1,5 +1,7 @@
-class Game
+# frozen_string_literal: true
 
+# Game class
+class Game
   # attr_reader :player_1, :player_2
 
   # def initialize(player_1: , player_2: )
@@ -10,5 +12,4 @@ class Game
   def attack(player)
     player.take_damage
   end
-
 end

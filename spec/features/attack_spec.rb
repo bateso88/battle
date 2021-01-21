@@ -7,10 +7,10 @@ feature 'attack opponent' do
     expect(page).to have_content('Alfred attacked Bruce!')
   end
 
-  scenario 'attack other player and reduce their HP' do 
+  scenario 'attack other player and reduce their HP' do
     sign_in_and_play
     click_button 'Attack'
     click_link 'OK'
-    expect(page).to have_content("Bruce: 50 HP")
+    expect(page).to have_content('Bruce: 50 HP')
   end
 end
