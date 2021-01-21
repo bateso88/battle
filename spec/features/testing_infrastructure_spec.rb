@@ -12,7 +12,7 @@ feature 'Entering players' do
   end
 
   scenario 'Displays Submit button' do
-    visit ('/')
+    visit('/')
     expect(page).to have_button('Submit')
   end
 
@@ -25,19 +25,15 @@ feature 'Entering players' do
   end
 end
 
-
-
-=begin
-post '/named-rabbit' do
-  p params
-  @rabbit_name = params[:name]
-  params[:age]
-  params[:breed]
-  erb(:index)
-end
-
-<form action ='/named-rabbit' method = "post" >
-  <input type='text' name='name'>
-  <input type='submit' value='Submit'>
-</form>
-=end
+# post '/named-rabbit' do
+#   p params
+#   @rabbit_name = params[:name]
+#   params[:age]
+#   params[:breed]
+#   erb(:index)
+# end
+#
+# <form action ='/named-rabbit' method = "post" >
+#   <input type='text' name='name'>
+#   <input type='submit' value='Submit'>
+# </form>
