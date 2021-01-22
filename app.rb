@@ -33,6 +33,7 @@ class Battle < Sinatra::Base
 
   get '/play' do
     @game = $game
+    redirect '/lose' if @game.current_turn.hp <= 0 
     erb(:play)
   end
 
@@ -40,6 +41,11 @@ class Battle < Sinatra::Base
     @game = $game
     @game.attack(@game.opponent_of(@game.current_turn))
     erb(:attack)
+  end
+
+  get '/lose' do 
+    @game = $game
+    erb(:lose)
   end
 
   # start the server if ruby file executed directly

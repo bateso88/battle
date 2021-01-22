@@ -40,4 +40,5 @@ describe Game do
       expect(game.opponent_of(bob)).to eq carl
     end
   end
+
 end
