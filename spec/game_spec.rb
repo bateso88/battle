@@ -34,4 +34,10 @@ describe Game do
       expect(game.current_turn).to eq carl
     end
   end
+
+  describe '#opponent_of' do
+    it 'shows opponent' do
+      expect(game.opponent_of(bob)).to eq carl
+    end
+  end
 end

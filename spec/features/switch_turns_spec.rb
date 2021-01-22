@@ -6,8 +6,7 @@ feature '#switch_turns' do
 
   scenario 'test current turn changes after attack' do
     sign_in_and_play
-    click_button 'Attack'
-    click_link 'OK'
+    attack_and_click_ok
     expect(page).to have_content("Bruce's Turn")
   end
 end

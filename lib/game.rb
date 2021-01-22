@@ -15,6 +15,10 @@ class Game
   end
 
   def switch_turns
-    @current_turn = current_turn == player_1 ? player_2 : player_1
+    @current_turn = opponent_of(current_turn)
+  end
+
+  def opponent_of(player)
+    player == player_1 ? player_2 : player_1
   end
 end
