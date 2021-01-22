@@ -24,27 +24,28 @@ class Battle < Sinatra::Base
     erb(:index)
   end
 
+  before do
+    @game = Game.instance
+  end
+
   post '/names' do
     p_1 = Player.new(name: params[:player_1_name])
     p_2 = Player.new(name: params[:player_2_name])
-    $game = Game.new(player_1: p_1, player_2: p_2)
+    @game = Game.create(p_1, p_2)
     redirect '/play'
   end
 
   get '/play' do
-    @game = $game
     redirect '/lose' if @game.current_turn.hp <= 0 
     erb(:play)
   end
 
   get '/attack' do
-    @game = $game
     @game.attack(@game.opponent_of(@game.current_turn))
     erb(:attack)
   end
 
   get '/lose' do 
-    @game = $game
     erb(:lose)
   end
 
